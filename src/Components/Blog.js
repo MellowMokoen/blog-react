@@ -5,7 +5,7 @@ export default function Blog() {
     <div>
       <div className="text-gray">Blog</div>
       <h1 className="text-7xl py-20 font-bold">
-        Best of <span class="block">the week</span>
+        Best of <span class="block p-7 px-16">the week</span>
       </h1>
       <ul className="flex space-x-10">
         <li className="no-underline hover:underline cursor-pointer">
