@@ -7,14 +7,14 @@ export default function Blog() {
       <h1 className="text-7xl py-20 font-bold">
         Best of <span class="block">the week</span>
       </h1>
-      <ul className="flex justify-start">
-        <li className="px-8 no-underline hover:underline cursor-pointer">
+      <ul className="flex space-x-10">
+        <li className="no-underline hover:underline cursor-pointer">
           Trending
         </li>
-        <li className="px-8 no-underline hover:underline cursor-pointer">
+        <li className="px-4 no-underline hover:underline cursor-pointer">
           Popular
         </li>
-        <li className="px-8 no-underline hover:underline cursor-pointer">
+        <li className="px-4 no-underline hover:underline cursor-pointer">
           Latest
         </li>
       </ul>
