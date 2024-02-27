@@ -39,57 +39,86 @@ export default function Blog() {
           placeholder="Read about..."
         />
       </div>
-      <div className="basis-1/4">
-        <div class="flex flex-col ...">
-          <div className="py-10">
-            <div className="font-bold text-xl">
-              AI Insights: Navigating the Future of Technology
+      <div className="bg-white border px-5 shadow-2xl shadow-black">
+        <div className="basis-1/4">
+          <div class="flex flex-col ...">
+            <div className="py-10">
+              <div className="font-bold text-xl">
+                AI Insights: Navigating the Future of Technology
+              </div>
+              <div className="text-sm">
+                This is going to be a paragraph snipet
+              </div>
+              <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
+                Read more
+              </button>
+              <img src={tech1} alt="story" className="size-32" />
             </div>
-            <div className="text-sm">
-              This is going to be a paragraph snipet
+            <div className="py-10">
+              <div className="font-bold text-xl">Benefits of healthy food</div>
+              <div className="text-sm">
+                This is going to be a paragraph snipet
+              </div>
+              <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
+                Read more
+              </button>
+              <img src={food1} alt="story" className="size-32" />
             </div>
-            <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
-              Read more
-            </button>
-            <img src={tech1} alt="story" className="size-32" />
-          </div>
-          <div className="py-10">
-            <div className="font-bold text-xl">Benefits of healthy food</div>
-            <div className="text-sm">
-              This is going to be a paragraph snipet
+            <div className="py-10">
+              <div className="font-bold text-xl">
+                Roaming Renegades: Tales of Adventure, Culture, and Discovery
+              </div>
+              <div className="text-sm">
+                This is going to be a paragraph snipet
+              </div>
+              <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
+                Read more
+              </button>
+              <img src={travel1} alt="story" className="size-32" />
             </div>
-            <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
-              Read more
-            </button>
-            <img src={food1} alt="story" className="size-32" />
-          </div>
-          <div className="py-10">
-            <div className="font-bold text-xl">
-              Roaming Renegades: Tales of Adventure, Culture, and Discovery
+            <div className="py-5">
+              <div className="font-bold text-xl">
+                Sweat & Success: Empowering Your Journey to Fitness
+              </div>
+              <div className="text-sm">
+                This is going to be a paragraph snipet
+              </div>
+              <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
+                Read more
+              </button>
+              <img src={gym1} alt="story" className="size-32" />
             </div>
-            <div className="text-sm">
-              This is going to be a paragraph snipet
-            </div>
-            <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
-              Read more
-            </button>
-            <img src={travel1} alt="story" className="size-32" />
-          </div>
-          <div className="py-5">
-            <div className="font-bold text-xl">
-              Sweat & Success: Empowering Your Journey to Fitness
-            </div>
-            <div className="text-sm">
-              This is going to be a paragraph snipet
-            </div>
-            <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
-              Read more
-            </button>
-            <img src={gym1} alt="story" className="size-32" />
           </div>
         </div>
       </div>
-      <div className="basis-1/4">Full story</div>
+      <div className="bg-white border px-5 shadow-2xl shadow-black">
+        <div className="basis-1/4">
+          <div class="flex flex-col ...">
+            <div className="py-10">
+              <div className="font-bold text-xl">
+                AI Insights: Navigating the Future of Technology
+              </div>
+              <div className="text-sm">
+                This is going to be a paragraph snipet
+              </div>
+              <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
+                Read more
+              </button>
+              <img src={tech1} alt="story" className="size-32" />
+            </div>
+            <div className="py-10">
+              <div className="font-bold text-xl">Benefits of healthy food</div>
+              <div className="text-sm">
+                This is going to be a paragraph snipet
+              </div>
+              <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
+                Read more
+              </button>
+              <img src={food1} alt="story" className="size-32" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
