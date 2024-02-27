@@ -39,7 +39,7 @@ export default function Blog() {
           placeholder="Read about..."
         />
       </div>
-      <div className="bg-white border px-5 shadow-2xl shadow-black overflow-y-auto">
+      <div className="bg-white border ps-8  shadow-2xl shadow-black overflow-y-auto">
         <div className="basis-1/4">
           <div class="flex flex-col ...">
             <div className="py-10">
@@ -49,20 +49,20 @@ export default function Blog() {
               <div className="text-sm">
                 This is going to be a paragraph snipet
               </div>
-              <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
+              <button className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6">
                 Read more
               </button>
-              <img src={tech1} alt="story" className="size-32" />
+              <img src={tech1} alt="story" className="size-40 ml-20" />
             </div>
             <div className="py-10">
               <div className="font-bold text-xl">Benefits of healthy food</div>
               <div className="text-sm">
                 This is going to be a paragraph snipet
               </div>
-              <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
+              <button className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6">
                 Read more
               </button>
-              <img src={food1} alt="story" className="size-32" />
+              <img src={food1} alt="story" className="size-40 ml-20" />
             </div>
             <div className="py-10">
               <div className="font-bold text-xl">
@@ -71,10 +71,10 @@ export default function Blog() {
               <div className="text-sm">
                 This is going to be a paragraph snipet
               </div>
-              <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
+              <button className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6">
                 Read more
               </button>
-              <img src={travel1} alt="story" className="size-32" />
+              <img src={travel1} alt="story" className="size-40 ml-20" />
             </div>
             <div className="py-5">
               <div className="font-bold text-xl">
@@ -83,15 +83,15 @@ export default function Blog() {
               <div className="text-sm">
                 This is going to be a paragraph snipet
               </div>
-              <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
+              <button className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6">
                 Read more
               </button>
-              <img src={gym1} alt="story" className="size-32" />
+              <img src={gym1} alt="story" className="size-40 ml-20" />
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-white border px-5 shadow-2xl shadow-black overflow-y-auto">
+      <div className="bg-white border px-5 shadow-2xl shadow-black overflow-y-auto scrollbar-hidden">
         <div className="basis-1/4">
           <div class="flex flex-col ...">
             <div className="py-10">

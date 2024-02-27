@@ -25,7 +25,7 @@ module.exports = {
 
     extend: {
       backgroundImage: {
-        "my-image": "url('../src/Images/my-image.png')",
+        "my-image": "url('../src/Images/my-image.jpg')",
       },
 
       gradientColorStopPositions: {
