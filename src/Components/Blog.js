@@ -47,7 +47,7 @@ export default function Blog() {
               This is going to be a paragraph snipet
             </div>
             <button>Read more</button>
-            <img src={tech1} alt="story" />
+            <img src={tech1} alt="story" className="size-32" />
           </div>
           <div className="py-5">
             <div className="font-bold">Title</div>
@@ -63,7 +63,7 @@ export default function Blog() {
               This is going to be a paragraph snipet
             </div>
             <button>Read more</button>
-            <img src={travel1} alt="story" />
+            <img src={travel1} alt="story" className="size-32" />
           </div>
           <div className="py-5">
             <div className="font-bold">Title</div>
@@ -71,7 +71,7 @@ export default function Blog() {
               This is going to be a paragraph snipet
             </div>
             <button>Read more</button>
-            <img src={gym1} alt="story" />
+            <img src={gym1} alt="story" className="size-32" />
           </div>
         </div>
       </div>
