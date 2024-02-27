@@ -18,19 +18,6 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
 
-    colors: {
-      white: "#ffffff",
-      blue: "#1fb6ff",
-      purple: "#7e5bef",
-      pink: "#ff49db",
-      orange: "#ff7849",
-      green: "#13ce66",
-      yellow: "#ffc82c",
-      "gray-dark": "#273444",
-      gray: "#8492a6",
-      "gray-light": "#d3dce6",
-    },
-
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
       serif: ["Merriweather", "serif"],
@@ -38,7 +25,7 @@ module.exports = {
 
     extend: {
       backgroundImage: {
-        "my-image": "url('../src/Images/my-image.jpg')",
+        "my-image": "url('../src/Images/my-image.png')",
       },
 
       gradientColorStopPositions: {
