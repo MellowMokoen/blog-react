@@ -15,7 +15,7 @@ import travel3 from "../Images/travel3.jpg";
 
 export default function Blog() {
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-row h-screen overflow-hidden">
       <div className="text-gray">Blog</div>
       <div className="basis-1/2">
         <h1 className="text-7xl py-20 font-bold">
@@ -39,7 +39,7 @@ export default function Blog() {
           placeholder="Read about..."
         />
       </div>
-      <div className="bg-white border px-5 shadow-2xl shadow-black">
+      <div className="bg-white border px-5 shadow-2xl shadow-black overflow-y-auto">
         <div className="basis-1/4">
           <div class="flex flex-col ...">
             <div className="py-10">
@@ -91,7 +91,7 @@ export default function Blog() {
           </div>
         </div>
       </div>
-      <div className="bg-white border px-5 shadow-2xl shadow-black">
+      <div className="bg-white border px-5 shadow-2xl shadow-black overflow-y-auto">
         <div className="basis-1/4">
           <div class="flex flex-col ...">
             <div className="py-10">
