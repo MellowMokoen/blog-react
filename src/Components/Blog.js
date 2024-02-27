@@ -46,7 +46,9 @@ export default function Blog() {
             <div className="text-xl">
               This is going to be a paragraph snipet
             </div>
-            <button>Read more</button>
+            <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
+              Read more
+            </button>
             <img src={tech1} alt="story" className="size-32" />
           </div>
           <div className="py-5">
@@ -54,7 +56,9 @@ export default function Blog() {
             <div className="text-xl">
               This is going to be a paragraph snipet
             </div>
-            <button>Read more</button>
+            <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
+              Read more
+            </button>
             <img src={food1} alt="story" className="size-32" />
           </div>
           <div className="py-5">
@@ -62,7 +66,9 @@ export default function Blog() {
             <div className="text-xl">
               This is going to be a paragraph snipet
             </div>
-            <button>Read more</button>
+            <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
+              Read more
+            </button>
             <img src={travel1} alt="story" className="size-32" />
           </div>
           <div className="py-5">
@@ -70,7 +76,9 @@ export default function Blog() {
             <div className="text-xl">
               This is going to be a paragraph snipet
             </div>
-            <button>Read more</button>
+            <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
+              Read more
+            </button>
             <img src={gym1} alt="story" className="size-32" />
           </div>
         </div>
