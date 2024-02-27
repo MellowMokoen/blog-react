@@ -39,11 +39,11 @@ export default function Blog() {
           placeholder="Read about..."
         />
       </div>
-      <div className="bg-white border ps-8  shadow-2xl shadow-black overflow-y-auto">
+      <div className="bg-gradient-to-t from-red-300 to-lime-200 rounded-lg border ps-8  shadow-2xl shadow-black overflow-y-auto">
         <div className="basis-1/4">
           <div class="flex flex-col ...">
             <div className="py-10">
-              <div className="font-bold text-xl">
+              <div className="font-bold font-mono text-xl">
                 AI Insights: Navigating the Future of Technology
               </div>
               <div className="text-sm">
@@ -91,7 +91,7 @@ export default function Blog() {
           </div>
         </div>
       </div>
-      <div className="bg-white border px-5 shadow-2xl shadow-black overflow-y-auto scrollbar-hidden">
+      <div className="bg-gradient-to-t from-red-300 to-lime-200 rounded-lg border px-5 shadow-2xl shadow-black overflow-y-auto scrollbar-hidden">
         <div className="basis-1/4">
           <div class="flex flex-col ...">
             <div className="py-10">
