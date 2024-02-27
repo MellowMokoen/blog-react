@@ -12,6 +12,14 @@
 }
 
 .stretched-image {
-  width: 80%; /* Set the width to 100% to stretch horizontally */
-  height: auto; /* Maintain aspect ratio */
+  width: 80%;
+  height: auto;
+}
+
+.font-pacifico {
+  font-family: "Pacifico";
+}
+
+.font-rubik {
+  font-family: "Rubik", sans-serif;
 }

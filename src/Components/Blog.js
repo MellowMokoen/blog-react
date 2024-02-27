@@ -18,8 +18,8 @@ export default function Blog() {
     <div className="flex flex-row h-screen overflow-hidden">
       <div className="text-gray">Blog</div>
       <div className="basis-1/2">
-        <h1 className="text-7xl py-20 font-bold">
-          Best of <span class="block p-7 px-16">the week</span>
+        <h1 className="text-7xl py-20 font-bold font-pacifico">
+          Best of <span class="block p-7 px-16 font-pacifico">the week</span>
         </h1>
         <ul className="flex space-x-10">
           <li className="no-underline hover:underline cursor-pointer">
@@ -35,15 +35,15 @@ export default function Blog() {
 
         <input
           type="search"
-          className="rounded-full p-3 my-16 outline outline-2 outline-offset-2"
+          className="rounded-full p-3 my-16 border-2"
           placeholder="Read about..."
         />
       </div>
-      <div className="bg-gradient-to-t from-red-300 to-lime-200 rounded-lg border ps-8  shadow-inner shadow-black overflow-y-auto no-scrollbar w-1/4">
+      <div className="bg-gradient-to-t font-rubik from-red-300 to-lime-200 rounded-lg border ps-8 pr-4 shadow-inner shadow-black overflow-y-auto no-scrollbar w-1/4">
         <div className="basis-1/4">
           <div class="flex flex-col ...">
             <div className="py-10">
-              <div className="font-bold font-mono text-x">
+              <div className="font-bold  text-x">
                 AI Insights: Navigating the Future of Technology
               </div>
               <div className="text-sm">
@@ -103,7 +103,7 @@ export default function Blog() {
           </div>
         </div>
       </div>
-      <div className="bg-gradient-to-t from-red-300 to-lime-200 rounded-lg border px-5 shadow-inner shadow-black overflow-y-auto no-scrollbar w-1/4">
+      <div className="bg-gradient-to-t font-rubik from-red-300 to-lime-200 rounded-lg border px-5 shadow-inner shadow-black overflow-y-auto no-scrollbar w-1/4">
         <div className="basis-1/4">
           <div class="flex flex-col ...">
             <div className="py-10">
