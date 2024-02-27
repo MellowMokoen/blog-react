@@ -10,3 +10,8 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+.stretched-image {
+  width: 80%; /* Set the width to 100% to stretch horizontally */
+  height: auto; /* Maintain aspect ratio */
+}
