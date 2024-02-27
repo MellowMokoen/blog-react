@@ -21,21 +21,21 @@ export default function Blog() {
         <h1 className="text-7xl py-20 font-bold font-pacifico">
           Best of <span class="block p-7 px-16 font-pacifico">the week</span>
         </h1>
-        <ul className="flex space-x-10">
-          <li className="no-underline hover:underline cursor-pointer">
+        <ul className="flex space-x-10 text-sm">
+          <li className="bg-rose-500 font-rubik rounded-xl p-3 text-white cursor-pointer">
             Trending
           </li>
-          <li className="px-4 no-underline hover:underline cursor-pointer">
+          <li className="bg-rose-500 font-rubik rounded-xl p-3 text-white px-4 cursor-pointer">
             Popular
           </li>
-          <li className="px-4 no-underline hover:underline cursor-pointer">
+          <li className="bg-rose-500 font-rubik rounded-xl p-3 text-white px-4 cursor-pointer">
             Latest
           </li>
         </ul>
 
         <input
           type="search"
-          className="rounded-full p-3 my-16 border-2"
+          className="rounded-full p-3 px-10 text-sm my-16 border-2"
           placeholder="Read about..."
         />
       </div>
