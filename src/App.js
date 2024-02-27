@@ -1,7 +1,11 @@
-import "./App.css";
+import Blog from "./Components/Blog";
 
 function App() {
-  return <h1 className="text-3xl font-bold underline">Blog React!</h1>;
+  return (
+    <div className="md:container md:mx-auto">
+      <Blog />
+    </div>
+  );
 }
 
 export default App;
