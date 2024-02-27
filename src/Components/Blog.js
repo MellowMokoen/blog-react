@@ -41,9 +41,11 @@ export default function Blog() {
       </div>
       <div className="basis-1/4">
         <div class="flex flex-col ...">
-          <div className="py-5">
-            <div className="font-bold">Title</div>
-            <div className="text-xl">
+          <div className="py-10">
+            <div className="font-bold text-xl">
+              AI Insights: Navigating the Future of Technology
+            </div>
+            <div className="text-sm">
               This is going to be a paragraph snipet
             </div>
             <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
@@ -51,9 +53,9 @@ export default function Blog() {
             </button>
             <img src={tech1} alt="story" className="size-32" />
           </div>
-          <div className="py-5">
-            <div className="font-bold">Title</div>
-            <div className="text-xl">
+          <div className="py-10">
+            <div className="font-bold text-xl">Benefits of healthy food</div>
+            <div className="text-sm">
               This is going to be a paragraph snipet
             </div>
             <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
@@ -61,9 +63,11 @@ export default function Blog() {
             </button>
             <img src={food1} alt="story" className="size-32" />
           </div>
-          <div className="py-5">
-            <div className="font-bold">Title</div>
-            <div className="text-xl">
+          <div className="py-10">
+            <div className="font-bold text-xl">
+              Roaming Renegades: Tales of Adventure, Culture, and Discovery
+            </div>
+            <div className="text-sm">
               This is going to be a paragraph snipet
             </div>
             <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
@@ -72,8 +76,10 @@ export default function Blog() {
             <img src={travel1} alt="story" className="size-32" />
           </div>
           <div className="py-5">
-            <div className="font-bold">Title</div>
-            <div className="text-xl">
+            <div className="font-bold text-xl">
+              Sweat & Success: Empowering Your Journey to Fitness
+            </div>
+            <div className="text-sm">
               This is going to be a paragraph snipet
             </div>
             <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
