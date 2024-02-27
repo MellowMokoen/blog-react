@@ -16,7 +16,7 @@ import travel3 from "../Images/travel3.jpg";
 export default function Blog() {
   return (
     <div className="flex flex-row h-screen overflow-hidden">
-      <div className="text-gray">Blog</div>
+      <div className="text-gray font-pacifico">blog</div>
       <div className="basis-1/2">
         <h1 className="text-7xl py-20 font-bold font-pacifico">
           Best of <span class="block p-7 px-16 font-pacifico">the week</span>
@@ -35,7 +35,7 @@ export default function Blog() {
 
         <input
           type="search"
-          className="rounded-full p-3 px-10 text-sm my-16 border-2"
+          className="rounded-full p-3 px-10 text-sm my-16 border-2 border-rose-500 outline-none"
           placeholder="Read about..."
         />
       </div>
