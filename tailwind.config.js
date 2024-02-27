@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -31,11 +30,20 @@ module.exports = {
       gray: "#8492a6",
       "gray-light": "#d3dce6",
     },
+
     fontFamily: {
       sans: ["Graphik", "sans-serif"],
       serif: ["Merriweather", "serif"],
     },
+
     extend: {
+      backgroundImage: {
+        "my-image": "url('../src/Images/my-image.jpg')",
+      },
+
+      gradientColorStopPositions: {
+        33: "33%",
+      },
       spacing: {
         128: "32rem",
         144: "36rem",
