@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useNavigate } from "react";
 import { Transition } from "react-transition-group";
 import food1 from "../Images/food1.jpg";
 import food2 from "../Images/food2.jpg";
@@ -73,7 +73,10 @@ export default function Blog() {
               <div className="text-sm">
                 This is going to be a paragraph snipet
               </div>
-              <button className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6">
+              <button
+                className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6"
+                onClick={handleReadMoreClick}
+              >
                 Read more
               </button>
               <img
@@ -89,7 +92,10 @@ export default function Blog() {
               <div className="text-sm">
                 This is going to be a paragraph snipet
               </div>
-              <button className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6">
+              <button
+                className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6"
+                onClick={handleReadMoreClick}
+              >
                 Read more
               </button>
               <img
@@ -105,7 +111,10 @@ export default function Blog() {
               <div className="text-sm">
                 This is going to be a paragraph snipet
               </div>
-              <button className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6">
+              <button
+                className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6"
+                onClick={handleReadMoreClick}
+              >
                 Read more
               </button>
               <img src={gym1} alt="story" className="size-40 stretched-image" />
@@ -118,26 +127,100 @@ export default function Blog() {
           <div className="basis-1/4">
             <div class="flex flex-col ...">
               <div className="py-10">
+                <img src={tech2} alt="story" className="size-40" />
                 <div className="font-bold text-x">
                   AI Insights: Navigating the Future of Technology
                 </div>
                 <div className="text-sm">
-                  This is going to be a paragraph snipet
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
+                  libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
+                  malesuada erat eu risus hendrerit, sed sagittis lectus
+                  pulvinar. Proin et mauris et velit feugiat vestibulum.
                 </div>
-                <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
-                  Read more
+                <img src={tech3} alt="story" className="size-40" />
+                <div className="text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
+                  libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
+                  malesuada erat eu risus hendrerit, sed sagittis lectus
+                  pulvinar. Proin et mauris et velit feugiat vestibulum.
+                </div>
+                <button className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6">
+                  More Articles
                 </button>
-                <img src={tech1} alt="story" className="size-40" />
               </div>
               <div className="py-10">
-                <div className="font-bold text-x">Benefits of healthy food</div>
-                <div className="text-sm">
-                  This is going to be a paragraph snipet
+                <img src={food2} alt="story" className="size-40" />
+                <div className="font-bold text-x">
+                  AI Insights: Navigating the Future of Technology
                 </div>
-                <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
-                  Read more
+                <div className="text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
+                  libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
+                  malesuada erat eu risus hendrerit, sed sagittis lectus
+                  pulvinar. Proin et mauris et velit feugiat vestibulum.
+                </div>
+                <img src={food3} alt="story" className="size-40" />
+                <div className="text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
+                  libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
+                  malesuada erat eu risus hendrerit, sed sagittis lectus
+                  pulvinar. Proin et mauris et velit feugiat vestibulum.
+                </div>
+                <button className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6">
+                  More Articles
                 </button>
-                <img src={food1} alt="story" className="size-40" />
+              </div>
+              <div className="py-10">
+                <img src={travel2} alt="story" className="size-40" />
+                <div className="font-bold text-x">
+                  AI Insights: Navigating the Future of Technology
+                </div>
+                <div className="text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
+                  libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
+                  malesuada erat eu risus hendrerit, sed sagittis lectus
+                  pulvinar. Proin et mauris et velit feugiat vestibulum.
+                </div>
+                <img src={travel3} alt="story" className="size-40" />
+                <div className="text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
+                  libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
+                  malesuada erat eu risus hendrerit, sed sagittis lectus
+                  pulvinar. Proin et mauris et velit feugiat vestibulum.
+                </div>
+                <button className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6">
+                  More Articles
+                </button>
+              </div>
+              <div className="py-10">
+                <img src={gym2} alt="story" className="size-40" />
+                <div className="font-bold text-x">
+                  AI Insights: Navigating the Future of Technology
+                </div>
+                <div className="text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
+                  libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
+                  malesuada erat eu risus hendrerit, sed sagittis lectus
+                  pulvinar. Proin et mauris et velit feugiat vestibulum.
+                </div>
+                <img src={gym3} alt="story" className="size-40" />
+                <div className="text-sm">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
+                  libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
+                  malesuada erat eu risus hendrerit, sed sagittis lectus
+                  pulvinar. Proin et mauris et velit feugiat vestibulum.
+                </div>
+                <button className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6">
+                  More Articles
+                </button>
               </div>
             </div>
           </div>
