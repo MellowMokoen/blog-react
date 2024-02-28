@@ -23,3 +23,7 @@
 .font-rubik {
   font-family: "Rubik", sans-serif;
 }
+
+.third-column {
+  transition: opacity 1.5s ease-in-out;
+}

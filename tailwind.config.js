@@ -18,11 +18,6 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
 
-    fontFamily: {
-      sans: ["Graphik", "sans-serif"],
-      serif: ["Merriweather", "serif"],
-    },
-
     extend: {
       backgroundImage: {
         "my-image": "url('../src/Images/my-image.jpg')",

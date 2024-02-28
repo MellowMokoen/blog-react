@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Transition } from "react-transition-group";
 import food1 from "../Images/food1.jpg";
 import food2 from "../Images/food2.jpg";
 import food3 from "../Images/food3.jpg";
@@ -14,6 +15,12 @@ import travel2 from "../Images/travel2.jpg";
 import travel3 from "../Images/travel3.jpg";
 
 export default function Blog() {
+  const [showThirdColumn, setShowThirdColumn] = useState(false);
+
+  const handleReadMoreClick = () => {
+    setShowThirdColumn(true);
+  };
+
   return (
     <div className="flex flex-row h-screen overflow-hidden">
       <div className="text-gray font-pacifico">blog</div>
@@ -49,7 +56,10 @@ export default function Blog() {
               <div className="text-sm">
                 This is going to be a paragraph snipet
               </div>
-              <button className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6">
+              <button
+                className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6"
+                onClick={handleReadMoreClick}
+              >
                 Read more
               </button>
               <img
@@ -103,34 +113,36 @@ export default function Blog() {
           </div>
         </div>
       </div>
-      <div className="bg-gradient-to-t font-rubik from-red-300 to-lime-200 rounded-lg border px-5 shadow-inner shadow-black overflow-y-auto no-scrollbar w-1/4">
-        <div className="basis-1/4">
-          <div class="flex flex-col ...">
-            <div className="py-10">
-              <div className="font-bold text-x">
-                AI Insights: Navigating the Future of Technology
+      {showThirdColumn && (
+        <div className="third-column bg-gradient-to-t font-rubik from-red-300 to-lime-200 rounded-lg border ps-8 pr-4 shadow-inner shadow-black overflow-y-auto no-scrollbar w-1/4">
+          <div className="basis-1/4">
+            <div class="flex flex-col ...">
+              <div className="py-10">
+                <div className="font-bold text-x">
+                  AI Insights: Navigating the Future of Technology
+                </div>
+                <div className="text-sm">
+                  This is going to be a paragraph snipet
+                </div>
+                <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
+                  Read more
+                </button>
+                <img src={tech1} alt="story" className="size-40" />
               </div>
-              <div className="text-sm">
-                This is going to be a paragraph snipet
+              <div className="py-10">
+                <div className="font-bold text-x">Benefits of healthy food</div>
+                <div className="text-sm">
+                  This is going to be a paragraph snipet
+                </div>
+                <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
+                  Read more
+                </button>
+                <img src={food1} alt="story" className="size-40" />
               </div>
-              <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
-                Read more
-              </button>
-              <img src={tech1} alt="story" className="size-40" />
-            </div>
-            <div className="py-10">
-              <div className="font-bold text-x">Benefits of healthy food</div>
-              <div className="text-sm">
-                This is going to be a paragraph snipet
-              </div>
-              <button className="rounded-r-lg bg-orange shadow-lg shadow-gray p-2 text-sm text-white my-6">
-                Read more
-              </button>
-              <img src={food1} alt="story" className="size-40" />
             </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
