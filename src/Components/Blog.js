@@ -42,7 +42,7 @@ export default function Blog() {
 
         <input
           type="search"
-          className="rounded-full p-3 px-10 text-sm my-16 border-2 border-rose-500 outline-none"
+          className="rounded-full p-3 px-10 text-sm my-16 border-2 border-rose-500 outline-none animate-bounce"
           placeholder="Read about..."
         />
       </div>
@@ -114,7 +114,7 @@ export default function Blog() {
         </div>
       </div>
       {showThirdColumn && (
-        <div className="third-column bg-gradient-to-t font-rubik from-red-300 to-lime-200 rounded-lg border ps-8 pr-4 shadow-inner shadow-black overflow-y-auto no-scrollbar w-1/4">
+        <div className="third-column transition delay-300 duration-300 ease-in-out bg-gradient-to-t font-rubik from-red-300 to-lime-200 rounded-lg border ps-8 pr-4 shadow-inner shadow-black overflow-y-auto no-scrollbar w-1/4">
           <div className="basis-1/4">
             <div class="flex flex-col ...">
               <div className="py-10">
