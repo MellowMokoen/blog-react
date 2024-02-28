@@ -127,19 +127,27 @@ export default function Blog() {
           <div className="basis-1/4">
             <div class="flex flex-col ...">
               <div className="py-10">
-                <img src={tech2} alt="story" className="size-40" />
-                <div className="font-bold text-x">
+                <img
+                  src={tech2}
+                  alt="story"
+                  className="size-40 stretched-image rounded-md shadow-md shadow-gray-500"
+                />
+                <div className="font-bold text-x py-5">
                   AI Insights: Navigating the Future of Technology
                 </div>
-                <div className="text-sm">
+                <div className="text-sm leading-relaxed">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
                   libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
                   malesuada erat eu risus hendrerit, sed sagittis lectus
                   pulvinar. Proin et mauris et velit feugiat vestibulum.
                 </div>
-                <img src={tech3} alt="story" className="size-40" />
-                <div className="text-sm">
+                <img
+                  src={tech3}
+                  alt="story"
+                  className="size-40 my-7 stretched-image rounded-md shadow-md shadow-gray-500"
+                />
+                <div className="text-sm leading-relaxed">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
                   libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
@@ -151,19 +159,27 @@ export default function Blog() {
                 </button>
               </div>
               <div className="py-10">
-                <img src={food2} alt="story" className="size-40" />
-                <div className="font-bold text-x">
+                <img
+                  src={food2}
+                  alt="story"
+                  className="size-40 stretched-image rounded-md shadow-md shadow-gray-500"
+                />
+                <div className="font-bold text-x py-5">
                   AI Insights: Navigating the Future of Technology
                 </div>
-                <div className="text-sm">
+                <div className="text-sm leading-relaxed">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
                   libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
                   malesuada erat eu risus hendrerit, sed sagittis lectus
                   pulvinar. Proin et mauris et velit feugiat vestibulum.
                 </div>
-                <img src={food3} alt="story" className="size-40" />
-                <div className="text-sm">
+                <img
+                  src={food3}
+                  alt="story"
+                  className="size-40 my-7 stretched-image rounded-md shadow-md shadow-gray-500"
+                />
+                <div className="text-sm leading-relaxed">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
                   libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
@@ -175,19 +191,27 @@ export default function Blog() {
                 </button>
               </div>
               <div className="py-10">
-                <img src={travel2} alt="story" className="size-40" />
-                <div className="font-bold text-x">
+                <img
+                  src={travel2}
+                  alt="story"
+                  className="size-40 stretched-image rounded-md shadow-md shadow-gray-500"
+                />
+                <div className="font-bold text-x py-5">
                   AI Insights: Navigating the Future of Technology
                 </div>
-                <div className="text-sm">
+                <div className="text-sm leading-relaxed">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
                   libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
                   malesuada erat eu risus hendrerit, sed sagittis lectus
                   pulvinar. Proin et mauris et velit feugiat vestibulum.
                 </div>
-                <img src={travel3} alt="story" className="size-40" />
-                <div className="text-sm">
+                <img
+                  src={travel3}
+                  alt="story"
+                  className="size-40 my-7 stretched-image rounded-md shadow-md shadow-gray-500"
+                />
+                <div className="text-sm leading-relaxed">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
                   libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
@@ -199,19 +223,27 @@ export default function Blog() {
                 </button>
               </div>
               <div className="py-10">
-                <img src={gym2} alt="story" className="size-40" />
-                <div className="font-bold text-x">
+                <img
+                  src={gym2}
+                  alt="story"
+                  className="size-40 stretched-image rounded-md shadow-md shadow-gray-500"
+                />
+                <div className="font-bold text-x py-5">
                   AI Insights: Navigating the Future of Technology
                 </div>
-                <div className="text-sm">
+                <div className="text-sm leading-relaxed">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
                   libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
                   malesuada erat eu risus hendrerit, sed sagittis lectus
                   pulvinar. Proin et mauris et velit feugiat vestibulum.
                 </div>
-                <img src={gym3} alt="story" className="size-40" />
-                <div className="text-sm">
+                <img
+                  src={gym3}
+                  alt="story"
+                  className="size-40 my-7 stretched-image rounded-md shadow-md shadow-gray-500"
+                />
+                <div className="text-sm leading-relaxed">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
                   libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
