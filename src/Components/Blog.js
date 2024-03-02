@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Transition } from "react-transition-group";
 import food1 from "../Images/food1.jpg";
 import food2 from "../Images/food2.jpg";
 import food3 from "../Images/food3.jpg";
@@ -31,10 +32,31 @@ export default function Blog() {
 
   return (
     <div className="flex flex-row h-screen overflow-hidden">
-      <div className="text-gray font-pacifico">blog</div>
       <div className="basis-1/2">
+        <div className="text-gray font-pacifico">blog</div>
+        <ul>
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="#">
+              Active
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              Link
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              Link
+            </a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+
         <h1 className="text-7xl py-20 font-bold font-pacifico">
-          Best of <span class="block p-7 px-16 font-pacifico">the week</span>
+          <span class="block p-7 px-16 font-pacifico"></span>
         </h1>
         <ul className="flex space-x-10 text-sm">
           <li className="bg-rose-500 font-rubik rounded-xl p-3 text-white cursor-pointer">
@@ -140,160 +162,183 @@ export default function Blog() {
         </div>
       )}
       {showThirdColumn && (
-        <div className="third-column transition delay-300 duration-300 ease-in-out bg-gradient-to-t font-rubik from-red-300 to-lime-200 rounded-lg border ps-8 pr-4 shadow-inner shadow-black overflow-y-auto no-scrollbar w-1/4">
-          <div className="basis-1/4">
-            <div class="flex flex-col ...">
-              {contentToShow === "tech" && (
-                <div className="py-10">
-                  <img
-                    src={tech2}
-                    alt="story"
-                    className="size-40 stretched-image rounded-md shadow-md shadow-gray-500"
-                  />
-                  <div className="font-bold text-x py-5">
-                    AI Insights: Navigating the Future of Technology
-                  </div>
-                  <div className="text-sm leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
-                    libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
-                    malesuada erat eu risus hendrerit, sed sagittis lectus
-                    pulvinar. Proin et mauris et velit feugiat vestibulum.
-                  </div>
-                  <img
-                    src={tech3}
-                    alt="story"
-                    className="size-40 my-7 stretched-image rounded-md shadow-md shadow-gray-500"
-                  />
-                  <div className="text-sm leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
-                    libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
-                    malesuada erat eu risus hendrerit, sed sagittis lectus
-                    pulvinar. Proin et mauris et velit feugiat vestibulum.
-                  </div>
-                  <button
-                    className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6"
-                    onClick={handleMoreArticlesClick}
-                  >
-                    More Articles
-                  </button>
+        <Transition
+          in={showThirdColumn}
+          enter="transition-all duration-500"
+          enterFrom="-ml-64"
+          enterTo="ml-0"
+          leave="transition-all duration-500"
+          leaveTo="-ml-64"
+        >
+          {(state) => (
+            <div
+              className={`bg-gradient-to-t font-rubik from-red-300 to-lime-200 rounded-lg border ps-8 pr-4 shadow-inner shadow-black overflow-y-auto no-scrollbar w-1/4 ${
+                state === "entered" ? "ml-0" : "-ml-64"
+              }`}
+            >
+              <div className="basis-1/4">
+                <div class="flex flex-col ...">
+                  {contentToShow === "tech" && (
+                    <div className="py-10">
+                      <img
+                        src={tech2}
+                        alt="story"
+                        className="size-40 stretched-image rounded-md shadow-md shadow-gray-500"
+                      />
+                      <div className="font-bold text-x py-5">
+                        AI Insights: Navigating the Future of Technology
+                      </div>
+                      <div className="text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum euismod, mauris ut tincidunt vestibulum,
+                        ligula libero volutpat nisi, vitae gravida enim nisl id
+                        nisi. Duis malesuada erat eu risus hendrerit, sed
+                        sagittis lectus pulvinar. Proin et mauris et velit
+                        feugiat vestibulum.
+                      </div>
+                      <img
+                        src={tech3}
+                        alt="story"
+                        className="size-40 my-7 stretched-image rounded-md shadow-md shadow-gray-500"
+                      />
+                      <div className="text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum euismod, mauris ut tincidunt vestibulum,
+                        ligula libero volutpat nisi, vitae gravida enim nisl id
+                        nisi. Duis malesuada erat eu risus hendrerit, sed
+                        sagittis lectus pulvinar. Proin et mauris et velit
+                        feugiat vestibulum.
+                      </div>
+                      <button
+                        className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6"
+                        onClick={handleMoreArticlesClick}
+                      >
+                        More Articles
+                      </button>
+                    </div>
+                  )}
+                  {contentToShow === "food" && (
+                    <div className="py-10">
+                      <img
+                        src={food2}
+                        alt="story"
+                        className="size-40 stretched-image rounded-md shadow-md shadow-gray-500"
+                      />
+                      <div className="font-bold text-x py-5">
+                        AI Insights: Navigating the Future of Technology
+                      </div>
+                      <div className="text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum euismod, mauris ut tincidunt vestibulum,
+                        ligula libero volutpat nisi, vitae gravida enim nisl id
+                        nisi. Duis malesuada erat eu risus hendrerit, sed
+                        sagittis lectus pulvinar. Proin et mauris et velit
+                        feugiat vestibulum.
+                      </div>
+                      <img
+                        src={food3}
+                        alt="story"
+                        className="size-40 my-7 stretched-image rounded-md shadow-md shadow-gray-500"
+                      />
+                      <div className="text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum euismod, mauris ut tincidunt vestibulum,
+                        ligula libero volutpat nisi, vitae gravida enim nisl id
+                        nisi. Duis malesuada erat eu risus hendrerit, sed
+                        sagittis lectus pulvinar. Proin et mauris et velit
+                        feugiat vestibulum.
+                      </div>
+                      <button
+                        className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6"
+                        onClick={handleMoreArticlesClick}
+                      >
+                        More Articles
+                      </button>
+                    </div>
+                  )}
+                  {contentToShow === "travel" && (
+                    <div className="py-10">
+                      <img
+                        src={travel2}
+                        alt="story"
+                        className="size-40 stretched-image rounded-md shadow-md shadow-gray-500"
+                      />
+                      <div className="font-bold text-x py-5">
+                        AI Insights: Navigating the Future of Technology
+                      </div>
+                      <div className="text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum euismod, mauris ut tincidunt vestibulum,
+                        ligula libero volutpat nisi, vitae gravida enim nisl id
+                        nisi. Duis malesuada erat eu risus hendrerit, sed
+                        sagittis lectus pulvinar. Proin et mauris et velit
+                        feugiat vestibulum.
+                      </div>
+                      <img
+                        src={travel3}
+                        alt="story"
+                        className="size-40 my-7 stretched-image rounded-md shadow-md shadow-gray-500"
+                      />
+                      <div className="text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum euismod, mauris ut tincidunt vestibulum,
+                        ligula libero volutpat nisi, vitae gravida enim nisl id
+                        nisi. Duis malesuada erat eu risus hendrerit, sed
+                        sagittis lectus pulvinar. Proin et mauris et velit
+                        feugiat vestibulum.
+                      </div>
+                      <button
+                        className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6"
+                        onClick={handleMoreArticlesClick}
+                      >
+                        More Articles
+                      </button>
+                    </div>
+                  )}
+                  {contentToShow === "gym" && (
+                    <div className="py-10">
+                      <img
+                        src={gym2}
+                        alt="story"
+                        className="size-40 stretched-image rounded-md shadow-md shadow-gray-500"
+                      />
+                      <div className="font-bold text-x py-5">
+                        AI Insights: Navigating the Future of Technology
+                      </div>
+                      <div className="text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum euismod, mauris ut tincidunt vestibulum,
+                        ligula libero volutpat nisi, vitae gravida enim nisl id
+                        nisi. Duis malesuada erat eu risus hendrerit, sed
+                        sagittis lectus pulvinar. Proin et mauris et velit
+                        feugiat vestibulum.
+                      </div>
+                      <img
+                        src={gym3}
+                        alt="story"
+                        className="size-40 my-7 stretched-image rounded-md shadow-md shadow-gray-500"
+                      />
+                      <div className="text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum euismod, mauris ut tincidunt vestibulum,
+                        ligula libero volutpat nisi, vitae gravida enim nisl id
+                        nisi. Duis malesuada erat eu risus hendrerit, sed
+                        sagittis lectus pulvinar. Proin et mauris et velit
+                        feugiat vestibulum.
+                      </div>
+                      <button
+                        className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6"
+                        onClick={handleMoreArticlesClick}
+                      >
+                        More Articles
+                      </button>
+                    </div>
+                  )}
                 </div>
-              )}
-              {contentToShow === "food" && (
-                <div className="py-10">
-                  <img
-                    src={food2}
-                    alt="story"
-                    className="size-40 stretched-image rounded-md shadow-md shadow-gray-500"
-                  />
-                  <div className="font-bold text-x py-5">
-                    AI Insights: Navigating the Future of Technology
-                  </div>
-                  <div className="text-sm leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
-                    libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
-                    malesuada erat eu risus hendrerit, sed sagittis lectus
-                    pulvinar. Proin et mauris et velit feugiat vestibulum.
-                  </div>
-                  <img
-                    src={food3}
-                    alt="story"
-                    className="size-40 my-7 stretched-image rounded-md shadow-md shadow-gray-500"
-                  />
-                  <div className="text-sm leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
-                    libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
-                    malesuada erat eu risus hendrerit, sed sagittis lectus
-                    pulvinar. Proin et mauris et velit feugiat vestibulum.
-                  </div>
-                  <button
-                    className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6"
-                    onClick={handleMoreArticlesClick}
-                  >
-                    More Articles
-                  </button>
-                </div>
-              )}
-              {contentToShow === "travel" && (
-                <div className="py-10">
-                  <img
-                    src={travel2}
-                    alt="story"
-                    className="size-40 stretched-image rounded-md shadow-md shadow-gray-500"
-                  />
-                  <div className="font-bold text-x py-5">
-                    AI Insights: Navigating the Future of Technology
-                  </div>
-                  <div className="text-sm leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
-                    libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
-                    malesuada erat eu risus hendrerit, sed sagittis lectus
-                    pulvinar. Proin et mauris et velit feugiat vestibulum.
-                  </div>
-                  <img
-                    src={travel3}
-                    alt="story"
-                    className="size-40 my-7 stretched-image rounded-md shadow-md shadow-gray-500"
-                  />
-                  <div className="text-sm leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
-                    libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
-                    malesuada erat eu risus hendrerit, sed sagittis lectus
-                    pulvinar. Proin et mauris et velit feugiat vestibulum.
-                  </div>
-                  <button
-                    className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6"
-                    onClick={handleMoreArticlesClick}
-                  >
-                    More Articles
-                  </button>
-                </div>
-              )}
-              {contentToShow === "gym" && (
-                <div className="py-10">
-                  <img
-                    src={gym2}
-                    alt="story"
-                    className="size-40 stretched-image rounded-md shadow-md shadow-gray-500"
-                  />
-                  <div className="font-bold text-x py-5">
-                    AI Insights: Navigating the Future of Technology
-                  </div>
-                  <div className="text-sm leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
-                    libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
-                    malesuada erat eu risus hendrerit, sed sagittis lectus
-                    pulvinar. Proin et mauris et velit feugiat vestibulum.
-                  </div>
-                  <img
-                    src={gym3}
-                    alt="story"
-                    className="size-40 my-7 stretched-image rounded-md shadow-md shadow-gray-500"
-                  />
-                  <div className="text-sm leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum euismod, mauris ut tincidunt vestibulum, ligula
-                    libero volutpat nisi, vitae gravida enim nisl id nisi. Duis
-                    malesuada erat eu risus hendrerit, sed sagittis lectus
-                    pulvinar. Proin et mauris et velit feugiat vestibulum.
-                  </div>
-                  <button
-                    className="rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white my-6"
-                    onClick={handleMoreArticlesClick}
-                  >
-                    More Articles
-                  </button>
-                </div>
-              )}
+              </div>
             </div>
-          </div>
-        </div>
+          )}
+        </Transition>
       )}
     </div>
   );
