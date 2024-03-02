@@ -63,6 +63,9 @@ export default function Blog() {
                   Exercise
                 </Link>
               </li>
+              <li className="nav-item rounded-r-lg bg-rose-500 shadow-lg shadow-gray p-2 text-sm text-white">
+                Log In
+              </li>
             </ul>
           </div>
           <input
@@ -70,6 +73,7 @@ export default function Blog() {
             className="rounded-full p-3 px-10 mx-auto block text-sm my-20 border-2 border-rose-500 outline-none animate-bounce"
             placeholder="Read about..."
           />
+          {/*
           <ul className="flex justify-center text-sm">
             <li className="text-rose-500 font-rubik rounded-xl p-3 cursor-pointer">
               Trending
@@ -81,10 +85,11 @@ export default function Blog() {
               Latest
             </li>
           </ul>
+  */}
         </div>
         <div className="flex justify-center h-screen overflow-hidden">
           {moreArticles && (
-            <div className="bg-gradient-to-t font-rubik from-red-300 to-lime-200 rounded-lg border ps-8 pr-4 shadow-inner shadow-black overflow-y-auto no-scrollbar w-1/4">
+            <div className="bg-gradient-to-t font-rubik from-red-300 to-lime-200 rounded-lg border ps-8 pr-4 shadow-inner shadow-black overflow-y-auto no-scrollbar w-1/3">
               <div className="">
                 <div class="flex flex-col ...">
                   <div className="py-10">
@@ -182,7 +187,7 @@ export default function Blog() {
             >
               {(state) => (
                 <div
-                  className={`bg-gradient-to-t font-rubik from-red-300 to-lime-200 rounded-lg border ps-8 pr-4 shadow-inner shadow-black overflow-y-auto no-scrollbar w-1/4 ${
+                  className={`bg-gradient-to-t font-rubik from-red-300 to-lime-200 rounded-lg border ps-8 pr-4 shadow-inner shadow-black overflow-y-auto no-scrollbar w-1/3 ${
                     state === "entered" ? "ml-0" : "-ml-64"
                   }`}
                 >
