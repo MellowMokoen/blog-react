@@ -71,19 +71,6 @@ export default function Blog() {
             className="rounded-full p-3 px-10 mx-auto block text-sm my-20 border-2 border-rose-500 outline-none animate-bounce"
             placeholder="Read about..."
           />
-          {/*
-          <ul className="flex justify-center text-sm">
-            <li className="text-rose-500 font-rubik rounded-xl p-3 cursor-pointer">
-              Trending
-            </li>
-            <li className="text-rose-500 font-rubik rounded-xl p-3 cursor-pointer">
-              Popular
-            </li>
-            <li className="text-rose-500 font-rubik rounded-xl p-3 cursor-pointer">
-              Latest
-            </li>
-          </ul>
-  */}
         </div>
         <div className="flex justify-center h-screen overflow-hidden">
           {moreArticles && (
