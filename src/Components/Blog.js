@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { Transition } from "react-transition-group";
 import { Link } from "react-router-dom";
-import "../Blog.css";
 import food1 from "../Images/food1.jpg";
 import food2 from "../Images/food2.jpg";
 import food3 from "../Images/food3.jpg";
