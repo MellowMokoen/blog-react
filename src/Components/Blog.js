@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { Transition } from "react-transition-group";
 import { Link } from "react-router-dom";
-import "../Blog.css";
 import food1 from "../Images/food1.jpg";
 import food2 from "../Images/food2.jpg";
 import food3 from "../Images/food3.jpg";
@@ -73,19 +71,6 @@ export default function Blog() {
             className="rounded-full p-3 px-10 mx-auto block text-sm my-20 border-2 border-rose-500 outline-none animate-bounce"
             placeholder="Read about..."
           />
-          {/*
-          <ul className="flex justify-center text-sm">
-            <li className="text-rose-500 font-rubik rounded-xl p-3 cursor-pointer">
-              Trending
-            </li>
-            <li className="text-rose-500 font-rubik rounded-xl p-3 cursor-pointer">
-              Popular
-            </li>
-            <li className="text-rose-500 font-rubik rounded-xl p-3 cursor-pointer">
-              Latest
-            </li>
-          </ul>
-  */}
         </div>
         <div className="flex justify-center h-screen overflow-hidden">
           {moreArticles && (
