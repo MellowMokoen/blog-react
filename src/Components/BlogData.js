@@ -15,47 +15,47 @@ const BlogData = [
   {
     id: 1,
     title: "AI Insights: Navigating the Future of Technology",
-    image: tech1,
+    img: tech1,
   },
   {
     id: 2,
     title: "Benefits of healthy food",
-    image: food1,
+    img: food1,
   },
   {
     id: 3,
     title: "Roaming Renegades: Tales of Adventure, Culture, and Discovery",
-    image: travel1,
+    img: travel1,
   },
   {
     id: 4,
     title: "Sweat & Success: Empowering Your Journey to Fitness",
-    image: gym1,
+    img: gym1,
   },
   {
     id: 5,
-    title: "Benefits of healthy food",
+    title2: "Benefits of healthy food",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod, mauris ut tincidunt vestibulum, ligula libero volutpat nisi, vitae gravida enim nisl id nisi. Duis malesuada erat eu risus hendrerit, sed sagittis lectus pulvinar. Proin et mauris et velit feugiat vestibulum.",
     image: tech2,
   },
   {
     id: 6,
-    title: "Benefits of healthy food",
+    title2: "Benefits of healthy food",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod, mauris ut tincidunt vestibulum, ligula libero volutpat nisi, vitae gravida enim nisl id nisi. Duis malesuada erat eu risus hendrerit, sed sagittis lectus pulvinar. Proin et mauris et velit feugiat vestibulum.",
     image: food2,
   },
   {
     id: 7,
-    title: "Benefits of healthy food",
+    title2: "Benefits of healthy food",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod, mauris ut tincidunt vestibulum, ligula libero volutpat nisi, vitae gravida enim nisl id nisi. Duis malesuada erat eu risus hendrerit, sed sagittis lectus pulvinar. Proin et mauris et velit feugiat vestibulum.",
     image: travel2,
   },
   {
     id: 8,
-    title: "Benefits of healthy food",
+    title2: "Benefits of healthy food",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod, mauris ut tincidunt vestibulum, ligula libero volutpat nisi, vitae gravida enim nisl id nisi. Duis malesuada erat eu risus hendrerit, sed sagittis lectus pulvinar. Proin et mauris et velit feugiat vestibulum.",
     image: gym2,

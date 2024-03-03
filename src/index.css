@@ -3,14 +3,13 @@
 @tailwind utilities;
 
 .nav-item a {
-  color: white;
+  color: black;
   border: none;
   margin: 10px;
 }
 
 .nav-item a:hover {
   color: #f43f5e;
-  font-size: 20px;
   text-decoration: underline;
 }
 
@@ -24,7 +23,7 @@
 }
 
 .stretched-image {
-  width: 80%;
+  width: 50%;
   height: auto;
 }
 
@@ -34,8 +33,4 @@
 
 .font-rubik {
   font-family: "Rubik", sans-serif;
-}
-
-.third-column {
-  transition: opacity 1.5s ease-in-out;
 }
