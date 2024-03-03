@@ -5,10 +5,9 @@ import BlogPost from "./BlogPost";
 
 export default function Blog() {
   return (
-    <div className="bg-my-image bg-no-repeat bg-cover overflow-hidden py-12 h-screen md:bg-cover">
+    <div className="bg-my-image bg-no-repeat bg-cover overflow-hidden py-10 h-screen md:bg-cover">
       <div className="container mx-auto pb-14 bg-white rounded-md">
         <div className="flex">
-          {/* First column */}
           <div className="flex flex-col w-1/2 font-rubik">
             <div className="py-10 px-5">
               <ul className="nav justify-content-start">
@@ -48,9 +47,9 @@ export default function Blog() {
           </div>
 
           {/* Second column */}
-          <div className="flex flex-col justify-center items-center w-1/2">
+          <div className="flex flex-col w-1/2">
             <div className="py-10 px-5">
-              <div className="bg-white font-rubik rounded-lg border px-10 pb-12 shadow-inner shadow-black overflow-y-auto no-scrollbar h-96 w-full">
+              <div className="bg-white font-rubik rounded-lg border px-10 pb-12 shadow-inner shadow-black overflow-y-auto no-scrollbar h-dvh w-full">
                 {BlogData.map((post, index) => (
                   <div key={index} className="blog-post">
                     <div className="blog-post-content">
