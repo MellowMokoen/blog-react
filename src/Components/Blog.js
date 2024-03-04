@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BlogData from "./BlogData";
-import BlogPost from "./BlogPost";
 
 export default function Blog() {
   return (
@@ -15,24 +14,16 @@ export default function Blog() {
                   Log In
                 </button>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
-                    Home
-                  </a>
+                  <Link to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Technology
-                  </a>
+                  <Link to="/posts/tech">Technology</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Food
-                  </a>
+                  <Link to="/posts/food">Food</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Exercise
-                  </a>
+                  <Link to="/posts/gym">Exercise</Link>
                 </li>
               </ul>
               <div className="text-5xl font-pacifico py-20">
@@ -46,20 +37,21 @@ export default function Blog() {
             </div>
           </div>
 
-          {/* Second column */}
           <div className="flex flex-col w-1/2">
             <div className="py-10 px-5">
               <div className="bg-white font-rubik rounded-lg border px-10 pb-12 shadow-inner shadow-black overflow-y-auto no-scrollbar h-dvh w-full">
-                {BlogData.map((post, index) => (
-                  <div key={index} className="blog-post">
+                {BlogData.map((post) => (
+                  <div key={post.id} className="blog-post">
                     <div className="blog-post-content">
                       <h2 className="text-md mt-4">{post.title}</h2>
-                      <button className="btn my-4 bg-rose-400 text-white">
-                        Read More
-                      </button>
+                      <Link to={`/posts/${post.id}`}>
+                        <button className="btn my-4 bg-rose-400 text-white">
+                          Read More
+                        </button>
+                      </Link>
                     </div>
                     <img
-                      src={post.img}
+                      src={post.image}
                       alt={post.title}
                       className="stretched-image blog-post-image size-32 "
                     />
