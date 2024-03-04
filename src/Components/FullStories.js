@@ -26,20 +26,22 @@ const FullStories = () => {
             </ul>
             <div className="font-rubik">
               {BlogData.map((post) => (
-                <div key={post.id} className="blog-post flex justify-between">
-                  <div className="blog-post-content">
-                    <div>
-                      <h2 className="text-md mt-4">{post.title}</h2>
-                      <p>{post.description}</p>
-                      <Link to={"/"}>
-                        <button className="btn my-4 bg-rose-400 text-white">
-                          More Articles
-                        </button>
-                      </Link>
-                    </div>
+                <div key={post.id} className="flex blog-post">
+                  <div className="blog-post-content flex flex-col w-1/2">
+                    <h2 className="text-3xl my-4">{post.title}</h2>
+                    <p className="">{post.description}</p>
+                    <Link to={"/"}>
+                      <button className="btn my-4 bg-rose-400 text-white">
+                        More Articles
+                      </button>
+                    </Link>
                   </div>
-                  <div className="size-40">
-                    <img src={post.image} alt="" />
+                  <div className="flex flex-col w-1/2">
+                    <img
+                      src={post.image}
+                      className="w-1/2 mx-auto block"
+                      alt=""
+                    />
                   </div>
                 </div>
               ))}
