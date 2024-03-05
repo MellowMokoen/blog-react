@@ -1,14 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Blog from "./Components/Blog";
+import FullStories from "./Components/FullStories";
 
 function App() {
   return (
-    <div>
-      <div className="bg-my-image bg-no-repeat bg-cover w-full h-full">
-        <div className="md:container md:mx-auto">
-          <Blog />
-        </div>
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" exact element={<Blog />} />
+        <Route path="/posts:id" element={<FullStories />} />
+      </Routes>
+    </Router>
   );
 }
 

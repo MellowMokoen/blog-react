@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.nav-item a {
+  color: black;
+  border: none;
+  margin: 10px;
+}
+
+.nav-item a:hover {
+  color: #f43f5e;
+  text-decoration: underline;
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -12,7 +23,7 @@
 }
 
 .stretched-image {
-  width: 80%;
+  width: 50%;
   height: auto;
 }
 
@@ -22,8 +33,4 @@
 
 .font-rubik {
   font-family: "Rubik", sans-serif;
-}
-
-.third-column {
-  transition: opacity 1.5s ease-in-out;
 }
