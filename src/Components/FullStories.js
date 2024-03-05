@@ -1,99 +1,59 @@
-import React from "react";
-import food2 from "../Images/food2.jpg";
-import food3 from "../Images/food3.jpg";
-import tech2 from "../Images/tech2.jpg";
-import tech3 from "../Images/tech3.png";
+import { useParams, Link } from "react-router-dom";
+import BlogData from "./BlogData";
 
-export default function FullStories() {
+const FullStories = () => {
+  const { id } = useParams();
+
+  // Find the post with the matching id
+  const post = BlogData.find((post) => post.id === parseInt(id));
+
+  if (!post) {
+    return <div>Post not found</div>;
+  }
+
   return (
-    <div className="bg-gradient-to-t from-red-300 to-lime-200 bg-no-repeat bg-cover w-full h-full">
-      <div className="max-w-screen-lg mx-auto">
-        <div className="grid grid-cols-2 gap-8">
-          {/* First row */}
-          <div className="flex flex-col">
-            <img
-              src={tech2}
-              alt="story"
-              className="rounded-md shadow-md shadow-gray-500"
-            />
-          </div>
-          <div className="flex flex-col">
-            <div className="font-bold text-x py-5">
-              AI Insights: Navigating the Future of Technology
-            </div>
-            <div className="text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum euismod, mauris ut tincidunt vestibulum, ligula libero
-              volutpat nisi, vitae gravida enim nisl id nisi. Duis malesuada
-              erat eu risus hendrerit, sed sagittis lectus pulvinar. Proin et
-              mauris et velit feugiat vestibulum.
-            </div>
-          </div>
-
-          {/* Second row */}
-          <div className="flex flex-col">
-            <img
-              src={food2}
-              alt="story"
-              className="rounded-md shadow-md shadow-gray-500"
-            />
-          </div>
-          <div className="flex flex-col">
-            <div className="font-bold text-x py-5">
-              AI Insights: Navigating the Future of Technology
-            </div>
-            <div className="text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum euismod, mauris ut tincidunt vestibulum, ligula libero
-              volutpat nisi, vitae gravida enim nisl id nisi. Duis malesuada
-              erat eu risus hendrerit, sed sagittis lectus pulvinar. Proin et
-              mauris et velit feugiat vestibulum.
-            </div>
-          </div>
-
-          {/* Third row */}
-          <div className="flex flex-col">
-            <img
-              src={tech3}
-              alt="story"
-              className="rounded-md shadow-md shadow-gray-500"
-            />
-          </div>
-          <div className="flex flex-col">
-            <div className="font-bold text-x py-5">
-              AI Insights: Navigating the Future of Technology
-            </div>
-            <div className="text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum euismod, mauris ut tincidunt vestibulum, ligula libero
-              volutpat nisi, vitae gravida enim nisl id nisi. Duis malesuada
-              erat eu risus hendrerit, sed sagittis lectus pulvinar. Proin et
-              mauris et velit feugiat vestibulum.
-            </div>
-          </div>
-
-          {/* Fourth row */}
-          <div className="flex flex-col">
-            <img
-              src={food3}
-              alt="story"
-              className="rounded-md shadow-md shadow-gray-500"
-            />
-          </div>
-          <div className="flex flex-col">
-            <div className="font-bold text-x py-5">
-              AI Insights: Navigating the Future of Technology
-            </div>
-            <div className="text-sm leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum euismod, mauris ut tincidunt vestibulum, ligula libero
-              volutpat nisi, vitae gravida enim nisl id nisi. Duis malesuada
-              erat eu risus hendrerit, sed sagittis lectus pulvinar. Proin et
-              mauris et velit feugiat vestibulum.
+    <div className="bg-my-image bg-no-repeat bg-cover py-10 md:bg-cover">
+      <div className="container mx-auto pb-14 bg-white rounded-md">
+        <div className="flex">
+          <div className="py-10 px-5">
+            <ul className="nav justify-content-start">
+              <button className="bg-rose-500 px-3 text-white rounded-lg">
+                Log In
+              </button>
+              <li className="nav-item">
+                <Link to="/">Travel</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/posts/tech">Technology</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/posts/food">Food</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/posts/gym">Exercise</Link>
+              </li>
+            </ul>
+            <div className="font-rubik">
+              <div className="flex blog-post">
+                <div className="blog-post-content pt-16 flex flex-col w-1/2">
+                  <h2 className="text-3xl my-4">{post.title}</h2>
+                  <p className="leading-loose">{post.description}</p>
+                </div>
+                <div className="flex flex-col w-1/2">
+                  <img
+                    src={post.image}
+                    className="w-1/2 mx-auto block pt-16"
+                    alt=""
+                  />
+                  <p className="text-sm py-4 text-center">{post.time}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default FullStories;
