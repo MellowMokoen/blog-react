@@ -14,7 +14,7 @@ export default function Blog() {
                   Log In
                 </button>
                 <li className="nav-item">
-                  <Link to="/">Home</Link>
+                  <Link to="/posts:id">Travel</Link>
                 </li>
                 <li className="nav-item">
                   <Link to="/posts/tech">Technology</Link>
@@ -45,7 +45,7 @@ export default function Blog() {
                     <div className="blog-post-content">
                       <h2 className="text-md mt-4">{post.title}</h2>
                       <Link to={`/posts/${post.id}`}>
-                        <button className="btn my-4 bg-rose-400 text-white">
+                        <button className="btn my-4 bg-rose-500 text-white">
                           Read More
                         </button>
                       </Link>
@@ -53,7 +53,7 @@ export default function Blog() {
                     <img
                       src={post.image}
                       alt={post.title}
-                      className="stretched-image blog-post-image size-32 "
+                      className="stretched-image pb-10 blog-post-image size-32"
                     />
                   </div>
                 ))}
