@@ -34,6 +34,17 @@ export default function Blog() {
                 className="rounded-full p-3 px-20 text-sm my-20 border-2 border-black outline-none animate-bounce"
                 placeholder="Read about..."
               />
+              <ul className="flex justify-between">
+                <li className="bg-rose-500 text-white px-4 rounded-md">
+                  Popular
+                </li>
+                <li className="bg-rose-500 text-white px-4 rounded-md">
+                  Trending
+                </li>
+                <li className="bg-rose-500 text-white px-4 rounded-md">
+                  Latest
+                </li>
+              </ul>
             </div>
           </div>
 
