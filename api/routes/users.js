@@ -27,4 +27,4 @@ router.post("/", withDBConnection, addUser);
 router.delete("/:id", withDBConnection, deleteUser);
 router.put("/:id", withDBConnection, updateUser);
 
-export default router;
+export default router; 
