@@ -14,16 +14,16 @@ export default function Blog() {
                   Log In
                 </button>
                 <li className="nav-item">
-                  <Link to="/posts:id">Travel</Link>
+                  <Link to="/posts/3">Travel</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/posts/tech">Technology</Link>
+                  <Link to="/posts/1">Technology</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/posts/food">Food</Link>
+                  <Link to="/posts/2">Food</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/posts/gym">Exercise</Link>
+                  <Link to="/posts/4">Exercise</Link>
                 </li>
               </ul>
               <div className="text-5xl text-center font-pacifico py-24">

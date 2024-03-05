@@ -2,13 +2,17 @@ import { useParams, Link } from "react-router-dom";
 import BlogData from "./BlogData";
 
 const FullStories = () => {
-  const { id } = useParams();
+  const { postId, category } = useParams();
 
-  // Find the post with the matching id
-  const post = BlogData.find((post) => post.id === parseInt(id));
+  // Filter BlogData based on postId or category
+  const filteredPosts = postId
+    ? BlogData.filter((post) => post.id === parseInt(postId))
+    : category
+    ? BlogData.filter((post) => post.category === category)
+    : [];
 
-  if (!post) {
-    return <div>Post not found</div>;
+  if (filteredPosts.length === 0) {
+    return <div>No posts found</div>;
   }
 
   return (
@@ -21,33 +25,40 @@ const FullStories = () => {
                 Log In
               </button>
               <li className="nav-item">
-                <Link to="/">Travel</Link>
+                <Link to="/posts/3">Travel</Link>
               </li>
               <li className="nav-item">
-                <Link to="/posts/tech">Technology</Link>
+                <Link to="/posts/1">Technology</Link>
               </li>
               <li className="nav-item">
-                <Link to="/posts/food">Food</Link>
+                <Link to="/posts/2">Food</Link>
               </li>
               <li className="nav-item">
-                <Link to="/posts/gym">Exercise</Link>
+                <Link to="/posts/4">Exercise</Link>
               </li>
             </ul>
             <div className="font-rubik">
-              <div className="flex blog-post">
-                <div className="blog-post-content pt-16 flex flex-col w-1/2">
-                  <h2 className="text-3xl my-4">{post.title}</h2>
-                  <p className="leading-loose">{post.description}</p>
+              {filteredPosts.map((post) => (
+                <div key={post.id} className="flex blog-post">
+                  <div className="blog-post-content pt-16 flex flex-col w-1/2">
+                    <h2 className="text-3xl my-4">{post.title}</h2>
+                    <p className="leading-loose">{post.description}</p>
+                    <Link to="/">
+                      <button className="btn my-4 bg-rose-500 text-white">
+                        More Articles
+                      </button>
+                    </Link>
+                  </div>
+                  <div className="flex flex-col w-1/2">
+                    <img
+                      src={post.image}
+                      className="w-1/2 mx-auto block pt-16"
+                      alt=""
+                    />
+                    <p className="text-sm py-4 text-center">{post.time}</p>
+                  </div>
                 </div>
-                <div className="flex flex-col w-1/2">
-                  <img
-                    src={post.image}
-                    className="w-1/2 mx-auto block pt-16"
-                    alt=""
-                  />
-                  <p className="text-sm py-4 text-center">{post.time}</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>

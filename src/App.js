@@ -7,7 +7,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" exact element={<Blog />} />
-        <Route path="/posts:id" element={<FullStories />} />
+        <Route path="/posts/:postId" element={<FullStories />} />
       </Routes>
     </Router>
   );
