@@ -26,14 +26,25 @@ export default function Blog() {
                   <Link to="/posts/gym">Exercise</Link>
                 </li>
               </ul>
-              <div className="text-5xl font-pacifico py-20">
+              <div className="text-5xl text-center font-pacifico py-24">
                 Best of the week
               </div>
               <input
                 type="search"
-                className="rounded-full p-3 px-20 text-sm my-20 border-2 border-black outline-none animate-bounce"
+                className="rounded-full mx-auto block py-2.5 px-28 text-sm my-20 border-2 border-black outline-none animate-bounce"
                 placeholder="Read about..."
               />
+              <ul className="flex justify-between">
+                <li className="bg-rose-600 text-white px-4 rounded-md cursor-pointer">
+                  Popular
+                </li>
+                <li className="bg-rose-600 text-white px-4 rounded-md cursor-pointer">
+                  Trending
+                </li>
+                <li className="bg-rose-600 text-white px-4 rounded-md cursor-pointer">
+                  Latest
+                </li>
+              </ul>
             </div>
           </div>
 
