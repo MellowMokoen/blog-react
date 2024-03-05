@@ -26,7 +26,7 @@ export default function Blog() {
                   <Link to="/posts/gym">Exercise</Link>
                 </li>
               </ul>
-              <div className="text-5xl text-center font-pacifico py-20">
+              <div className="text-5xl text-center font-pacifico py-24">
                 Best of the week
               </div>
               <input
@@ -35,13 +35,13 @@ export default function Blog() {
                 placeholder="Read about..."
               />
               <ul className="flex justify-between">
-                <li className="bg-rose-600 text-white px-4 rounded-md">
+                <li className="bg-rose-600 text-white px-4 rounded-md cursor-pointer">
                   Popular
                 </li>
-                <li className="bg-rose-600 text-white px-4 rounded-md">
+                <li className="bg-rose-600 text-white px-4 rounded-md cursor-pointer">
                   Trending
                 </li>
-                <li className="bg-rose-600 text-white px-4 rounded-md">
+                <li className="bg-rose-600 text-white px-4 rounded-md cursor-pointer">
                   Latest
                 </li>
               </ul>
