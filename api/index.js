@@ -5,6 +5,11 @@ const app = express ()
 
 app.use(express.json())
 
-app.listen(8800,()=>{
+app.get("/test", (req,res)=>{
+    res.json("it works")
+                    
+})
+
+app.listen(3309,()=>{
     console.log("Connected")
 })
