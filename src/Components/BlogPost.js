@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const BlogPost = ({ title, description, image }) => {
   return (
@@ -8,7 +7,7 @@ const BlogPost = ({ title, description, image }) => {
         <h2>{title}</h2>
         <p>{description}</p>
         <img src={image} alt={title} className="blog-post-image" />
-        <Link to={`/posts/${id}`}>Read More</Link>
+        <p>{time}</p>
       </div>
     </div>
   );

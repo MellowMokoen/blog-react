@@ -11,6 +11,7 @@ const BlogData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod, mauris ut tincidunt vestibulum, ligula libero volutpat nisi, vitae gravida enim nisl id nisi. Duis malesuada erat eu risus hendrerit, sed sagittis lectus pulvinar. Proin et mauris et velit feugiat vestibulum.",
     image: tech1,
     category: "tech",
+    time: "Posted 3 hours ago by A",
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const BlogData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod, mauris ut tincidunt vestibulum, ligula libero volutpat nisi, vitae gravida enim nisl id nisi. Duis malesuada erat eu risus hendrerit, sed sagittis lectus pulvinar. Proin et mauris et velit feugiat vestibulum.",
     image: food2,
     category: "food",
+    time: "Posted a day ago by B",
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ const BlogData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod, mauris ut tincidunt vestibulum, ligula libero volutpat nisi, vitae gravida enim nisl id nisi. Duis malesuada erat eu risus hendrerit, sed sagittis lectus pulvinar. Proin et mauris et velit feugiat vestibulum.",
     image: travel1,
     category: "travel",
+    time: "Posted now by C",
   },
   {
     id: 4,
@@ -35,6 +38,7 @@ const BlogData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod, mauris ut tincidunt vestibulum, ligula libero volutpat nisi, vitae gravida enim nisl id nisi. Duis malesuada erat eu risus hendrerit, sed sagittis lectus pulvinar. Proin et mauris et velit feugiat vestibulum.",
     image: gym2,
     category: "gym",
+    time: "Posted 5 days ago by D",
   },
 ];
 
