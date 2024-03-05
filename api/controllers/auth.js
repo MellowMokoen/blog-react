@@ -11,6 +11,9 @@ router.post('/register', registerUser);
 // Login a user
 router.post('/login', loginUser);
 
+// Logout a user
+router.post('/logout', logoutUser);
+
 // Get user profile
 router.get('/profile', authenticateUser, getUserProfile);
 
@@ -75,6 +78,15 @@ async function loginUser(req, res) {
 
     return res.json('Login successful.');
   });
+}
+
+// Controller function to logout a user
+function logoutUser(req, res) {
+  // Clear the token cookie on the client side
+  res.clearCookie('access_token');
+
+  // Respond with a success message
+  res.json('Logout successful.');
 }
 
 // Controller function to get user profile
