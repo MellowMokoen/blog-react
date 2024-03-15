@@ -31,17 +31,27 @@ router.post("/users", (req, res) => {
 
 // POST request to create a new post
 router.post("/posts", (req, res) => {
-  const { title, content, userId } = req.body; // Assuming userId is required to associate the post with a user
+  // Assuming the body includes title, content, userId, and image URL
+  // Extracting image from the request body along with title, content, and userId
+  const { title, content, userId, image } = req.body;
+
   pool.query(
-    "INSERT INTO posts (title, content, user_id) VALUES (?, ?, ?)",
-    [title, content, userId],
+    // Include the `image` and `added_via_form` columns in your INSERT statement
+    "INSERT INTO posts (title, content, user_id, image, added_via_form) VALUES (?, ?, ?, ?, TRUE)",
+    [title, content, userId, image], // Pass the image URL from the request body
     (err, results) => {
       if (err) {
         console.error("Error executing MySQL query:", err);
         res.status(500).json({ error: "Internal server error" });
         return;
       }
-      res.status(201).json({ message: "Post created successfully" });
+      // Respond with a message indicating successful creation
+      res
+        .status(201)
+        .json({
+          message: "Post created successfully",
+          postId: results.insertId,
+        });
     }
   );
 });

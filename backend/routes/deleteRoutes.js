@@ -25,15 +25,17 @@ router.delete("/user/:id", (req, res) => {
 });
 
 // DELETE request to delete a post by ID
-router.delete("/post/:id", (req, res) => {
-  const postId = req.params.id;
-  pool.query("DELETE FROM posts WHERE id = ?", [postId], (err, results) => {
-    if (err) {
-      console.error("Error executing MySQL query:", err);
-      res.status(500).json({ error: "Internal server error" });
-      return;
+router.delete("/posts/:id", (req, res) => {
+  const { id } = req.params;
+  // Your logic to delete the post from the database
+  pool.query("DELETE FROM posts WHERE id = ?", [id], (error, results) => {
+    if (error) {
+      return res.status(500).json({ error: "Internal server error" });
     }
-    res.json({ message: "Post deleted successfully" });
+    if (results.affectedRows === 0) {
+      return res.status(404).json({ message: "Post not found" });
+    }
+    res.status(200).json({ message: "Post deleted successfully" });
   });
 });
 

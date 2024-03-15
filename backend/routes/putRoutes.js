@@ -30,16 +30,22 @@ router.put("/user/:id", (req, res) => {
 });
 
 // PUT request to update a post by ID
-router.put("/post/:id", (req, res) => {
+router.put("/posts/:id", (req, res) => {
+  // Note the change to "/posts/:id"
   const postId = req.params.id;
-  const { title, content } = req.body;
+  const { title, content, image } = req.body; // Assuming you also want to update the image
   pool.query(
-    "UPDATE posts SET title = ?, content = ? WHERE id = ?",
-    [title, content, postId],
+    "UPDATE posts SET title = ?, content = ?, image = ? WHERE id = ?",
+    [title, content, image, postId], // Include image in the query parameters
     (err, results) => {
       if (err) {
         console.error("Error executing MySQL query:", err);
         res.status(500).json({ error: "Internal server error" });
+        return;
+      }
+      if (results.affectedRows === 0) {
+        // No rows were affected, which means the post was not found
+        res.status(404).json({ message: "Post not found" });
         return;
       }
       res.json({ message: "Post updated successfully" });

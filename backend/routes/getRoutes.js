@@ -12,37 +12,19 @@ const pool = mysql.createPool({
   database: "blogdb",
 });
 
-// GET all users or get user by ID
-router.get("/users/:id?", (req, res) => {
-  const userId = req.params.id;
-  if (userId) {
-    // Fetch user by ID
-    pool.query("SELECT * FROM users WHERE id = ?", [userId], (err, results) => {
-      if (err) {
-        console.error("Error executing MySQL query:", err);
-        res.status(500).json({ error: "Internal server error" });
-        return;
-      }
-      if (results.length === 0) {
-        res.status(404).json({ error: "User not found" });
-        return;
-      }
-      res.json(results[0]);
-    });
-  } else {
-    // Fetch all users
-    pool.query("SELECT * FROM users", (err, results) => {
-      if (err) {
-        console.error("Error executing MySQL query:", err);
-        res.status(500).json({ error: "Internal server error" });
-        return;
-      }
-      res.json(results);
-    });
-  }
+// GET all users
+router.get("/users", (req, res) => {
+  pool.query("SELECT * FROM users", (err, results) => {
+    if (err) {
+      console.error("Error executing MySQL query:", err);
+      res.status(500).json({ error: "Internal server error" });
+      return;
+    }
+    res.json(results);
+  });
 });
 
-// GET all posts or get post by ID
+// GET all posts or a specific post by ID
 router.get("/posts/:id?", (req, res) => {
   const postId = req.params.id;
   if (postId) {
@@ -60,19 +42,22 @@ router.get("/posts/:id?", (req, res) => {
       res.json(results[0]);
     });
   } else {
-    // Fetch all posts
-    pool.query("SELECT * FROM posts", (err, results) => {
-      if (err) {
-        console.error("Error executing MySQL query:", err);
-        res.status(500).json({ error: "Internal server error" });
-        return;
+    // Fetch all posts that were added via form
+    pool.query(
+      "SELECT * FROM posts WHERE added_via_form = TRUE",
+      (err, results) => {
+        if (err) {
+          console.error("Error executing MySQL query:", err);
+          res.status(500).json({ error: "Internal server error" });
+          return;
+        }
+        res.json(results);
       }
-      res.json(results);
-    });
+    );
   }
 });
 
-// GET all comments or get comment by ID
+// GET all comments or a specific comment by ID
 router.get("/comments/:id?", (req, res) => {
   const commentId = req.params.id;
   if (commentId) {
